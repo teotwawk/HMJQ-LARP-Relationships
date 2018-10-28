@@ -59,22 +59,5 @@ digraph hmjq{
         yca -> dgc [label = "盗出炸藥交給",color = "#66cc00"]
         yca -> glz [label = "沒錢搭車",color = "#66cc00"]
         glz -> hlh [label = "洩漏法蘭莊有炸藥的事",color = "#66cc00"]
-        
-
-
-
-
-
-
-
-
-
-
-    }
-  }
-}
-
-
-
-
+      }
 }
