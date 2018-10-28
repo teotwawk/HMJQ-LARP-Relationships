@@ -1,0 +1,80 @@
+digraph hmjq{
+    //劇情題到的組織
+    node [shape=doubleoctagon]
+    hlh [label="黑狼會"]
+    tjs [label="田吉株式會社"]
+    node [shape=record]
+    subgraph cluster_天津結社 {
+        graph [label="《天津結社六人》\n(光緒二十一年閏五月結社於天津)"]
+        //定義人物
+        zwl [label="{趙萬雷|男 - 四十四歲 | 丹水山莊主人\n遭馮雙驥毒害身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+        ms [label="{孟深|男 - ???歲 | 法蘭莊主人\n化學家\n遭杜貴成刺殺身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+        yg [label="{岳古/岳東汶|男 - 四十七歲 | 岳氏藥材公司老闆\n醫師}",color = "#0000ff",style="rounded"];
+        tmg [label="{唐茂光|男 - ???歲 | 北洋水師軍艦管帶}",color = "#0000ff",style="rounded"];
+        ybc [label="{虞北辰|男 - ???歲 | 地質學者}",color = "#0000ff",style="rounded"];
+        rx [label="{任雪|女 - ???歲 | }",color = "#ff0000",style="rounded"];
+        //定義關係
+        rx -> ybc [label="夫妻", dir = both]
+        tmg -> zwl [label = "贈送金龍刀",color = "#66cc00"]
+      }
+    subgraph cluster_傀儡的記憶{
+        graph [label="《傀儡的記憶》\n(1914年8月3日 上海郊外-法蘭莊)"]
+        //玩家操控腳色
+        subgraph cluster_傀儡的記憶玩家角色 {
+            graph [label="《傀儡的記憶玩家角色》"]
+            mqh [label="{孟清淮/吳笑/(假)安寧|男 - 二十多歲 | 法蘭莊少主}",color = "#0000ff", style="rounded"];
+            yca [label="{易楚安/血衣男人/(假)安寧|男 - ???歲 | 申報記者}",color = "#0000ff", style="rounded"];
+            yks [label="{岳客沙/(假)約克|男 - 二十五歲 | 岳氏藥材公司少東}",color = "#0000ff", style="rounded"];
+            glz [label="{郭立柱/郭大|男 - 四十歲 | 馬車伕}",color = "#0000ff", style="rounded"];
+            zly [label="{趙洛意/洛意絲/Louis|女 - 十九歲 |趙家千金\n宣揚男女平權 }",color = "#ff0000",style="rounded"];
+            tml [label="{唐莫離/莫莉/Moly|女 - 二十二歲 |唐家小姐\n宣揚男女平權 }",color = "#ff0000",style="rounded"];
+          }
+        //其他角色
+        subgraph cluster_傀儡的記憶其他角色 {
+            graph [label="《傀儡的記憶其他角色》"]
+            wba [label="{吳百安|男 - ???歲 | 岳氏藥材公司員工\n被李駱明打死}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            dgc [label="{杜貴成/貴叔|男 - ???歲 | 前法蘭莊總管\n十三號病人\n遭孟清淮刺殺身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            dhx [label="{杜輝信|男 - ???歲 | 前法蘭莊總管\n\n爆炸意外身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+        }
+        //父子
+        ms -> mqh  [label="父子" dir= both]
+        dhx -> dgc [label="父子" dir= both]
+        dgc -> yca [label="父子" dir= both]
+        //父女
+        zwl -> zly [label="父女" dir= both]
+        tmg -> tml [label="父女" dir= both]
+        //養父子
+        wba -> mqh [label="養父子" dir= both]
+        //主僕
+        ms -> dhx [label="主僕" dir= both]
+        ms -> dgc [label="主僕" dir= both]
+        //假扮
+        mqh -> yca [label="假扮",color="#6600CC"]
+        //殺害&棄屍
+        dgc -> ms [label="殺害",color="#990000"]
+        mqh -> dgc [label="殺害",color="#990000"]
+        glz -> wba [label="棄屍(黃浦江)",color="#990000"]
+        //劇情聯繫
+        hlh -> dgc [label = "威脅利誘取得炸藥",color = "#66cc00"]
+        yca -> dgc [label = "盗出炸藥交給",color = "#66cc00"]
+        yca -> glz [label = "沒錢搭車",color = "#66cc00"]
+        glz -> hlh [label = "洩漏法蘭莊有炸藥的事",color = "#66cc00"]
+        
+
+
+
+
+
+
+
+
+
+
+    }
+  }
+}
+
+
+
+
+}
