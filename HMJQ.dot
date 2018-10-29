@@ -3,6 +3,7 @@ digraph hmjq{
     node [shape=doubleoctagon]
     hlh [label="黑狼會"]
     tjs [label="田吉株式會社"]
+    flsh [label="法朗商行"]
     node [shape=record]
     subgraph cluster_天津結社 {
         graph [label="《天津結社六人》\n(光緒二十一年閏五月結社於天津)"]
@@ -19,7 +20,7 @@ digraph hmjq{
       }
     subgraph cluster_傀儡的記憶{
         graph [label="《傀儡的記憶》\n(1914年8月3日 上海郊外-法蘭莊)"]
-        //玩家操控腳色
+        //玩家操控角色
         subgraph cluster_傀儡的記憶玩家角色 {
             graph [label="《傀儡的記憶玩家角色》"]
             mqh [label="{孟清淮/吳笑/(假)安寧|男 - 二十多歲 | 法蘭莊少主}",color = "#0000ff", style="rounded"];
@@ -35,7 +36,7 @@ digraph hmjq{
             wba [label="{吳百安|男 - ???歲 | 岳氏藥材公司員工\n被李駱明打死}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
             dgc [label="{杜貴成/貴叔|男 - ???歲 | 前法蘭莊總管\n十三號病人\n遭孟清淮刺殺身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
             dhx [label="{杜輝信|男 - ???歲 | 前法蘭莊總管\n\n爆炸意外身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
-        }
+          }
         //父子
         ms -> mqh  [label="父子" dir= both]
         dhx -> dgc [label="父子" dir= both]
@@ -50,6 +51,11 @@ digraph hmjq{
         ms -> dgc [label="主僕" dir= both]
         //假扮
         mqh -> yca [label="假扮",color="#6600CC"]
+        //訂婚
+        mqh -> zly [label="訂婚",color="#ff99cc" dir= both]
+        //戀愛
+        mqh -> tml [label="喜歡",color="#ff99cc" ]
+        yks -> tml [label="喜歡",color="#ff99cc" ]
         //殺害&棄屍
         dgc -> ms [label="殺害",color="#990000"]
         mqh -> dgc [label="殺害",color="#990000"]
@@ -60,4 +66,100 @@ digraph hmjq{
         yca -> glz [label = "沒錢搭車",color = "#66cc00"]
         glz -> hlh [label = "洩漏法蘭莊有炸藥的事",color = "#66cc00"]
       }
+    subgraph cluster_孝衣新娘{
+        graph [label="《孝衣新娘》\n(1914年8月3日 蘇州郊外-百里村)"]
+        //玩家操控角色
+        subgraph cluster_孝衣新娘玩家角色 {
+          graph [label="《孝衣新娘玩家角色》"]
+          yzy [label="{姚仲義|男 - 二十多歲 |姚家次子}",color = "#0000ff", style="rounded"];
+          hfr [label="{田紅嬌/紅夫人|女 - 二十九歲 |姚長壽三房太太\n翡翠居老闆娘}",color = "#ff0000",style="rounded"];
+          yl  [label="{廖雲凌|女 - 二十多歲 |短髮英氣}",color = "#ff0000",style="rounded"];
+          hry [label="{胡人玉/范金魁/金鬍子|男 - 三十多歲 |江洋大盗}",color = "#0000ff",style="rounded"];
+          cjm [label="{陳均夢|女 - 二十一歲 |姚孟仁妻子\n長髮白衣}",color = "#ff0000",style="rounded"];
+          yjh [label="{虞君鴻/尹少鳴|男 - 二十多歲 |}",color = "#0000ff", style="rounded"];
+          fmy [label="{方敏月|女 - 二十一歲 |閘北西醫院護士長}",color = "#ff0000",style="rounded"];
+          zdc [label="{張得采/朱迪|男 - 三十多歲 |洋人買辦}",color = "#0000ff", style="rounded"];
+          caq [label="{陳安巧|女 - 二十一歲 |陳均夢的侍女}",color = "#ff0000",style="rounded"];
+        }
+        //其他角色
+        subgraph cluster_孝衣新娘其他角色 {
+          graph [label="《孝衣新娘其他角色》"]
+          ymr [label="{姚孟仁/徐柏清|男 - ???歲 |姚家長子\n民國軍人\n遭方敏月槍擊身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+          ycs [label="{姚長壽|男 - ???歲 |姚家主人}",color = "#0000ff", style="rounded"];
+          rdy [label="{任仲遠|男 - ???歲 |任氏四象掌傳人\n廖氏商行管家}",color = "#0000ff", style="rounded"];
+          lyq [label="{廖一喬|男 - ???歲 |廖氏商行老闆\n晉商會會長}",color = "#0000ff", style="rounded"];
+          cqw [label="{陳輕梧|男 - ???歲 |法朗商行老闆}",color = "#0000ff", style="rounded"];
+          cst [label="{陳市田|男 - ???歲 |陳輕梧的僕人\n遭范金魁用磚頭擊斃}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+          fcs [label="{方乘山|男 - ???歲 |杜輝信的助手\n遭姚長壽與陳輕梧聯手殺害}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+          xfr [label="{徐夫人|女 - ???歲 |姚長壽元配\n生病死亡}",color = "#ff0000", style="filled,rounded",fillcolor="#a1a1a1"];
+          zyt [label="{張雅娣|女 - ???歲 |姚長壽二房太太\n遭徐夫人設計跌落陽台死亡}",color = "#ff0000", style="filled,rounded",fillcolor="#a1a1a1"];
+          lgs [label="{李廣生|男 - ???歲 |李氏兄弟\n死於隧道坍方意外}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+          lks [label="{李寬生|男 - ???歲 |李氏兄弟\n死於隧道坍方意外}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+        }
+        //父子
+        ycs -> ymr [label="父子" dir= both]
+        ycs -> yzy [label="父子" dir= both]
+        ybc -> yjh [label="父子" dir= both]
+        //父女
+        cqw -> cjm [label="父女" dir= both]
+        cst -> caq [label="父女" dir= both]
+        rdy -> rs [label="父女" dir= both]
+        fcs -> fmy [label="父女" dir= both]
+        lyq -> yl [label="父女" dir= both]
+        //母子
+        rs -> yjh [label="母子" dir= both]
+        xfr -> ymr [label="母子" dir= both]
+        zyt -> yzy [label="母子" dir= both]
+        //夫妻
+        ycs -> xfr [label="夫妻" dir= both]
+        ycs -> zyt [label="夫妻" dir= both]
+        ycs -> hfr [label="夫妻" dir= both]
+        ymr -> cjm [label="夫妻" dir= both]
+        //兄弟
+        ymr -> yzy [label="兄弟" dir= both]
+        lgs -> lks [label="兄弟" dir= both]
+        //訂婚
+        hry -> hfr [label="訂婚",color="#ff99cc" dir= both]
+        //姑姪
+        zyt -> zdc [label="姑姪" dir= both]
+        //堂表姊妹
+        cjm -> caq [label="堂姊妹" dir= both]
+        fmy -> hfr [label="表姊妹" dir= both]
+        //其他親戚
+        fcs -> hfr [label="姨父"]
+
+        //主僕
+        cjm -> caq [label="主僕" dir= both]
+        cqw -> cst [label="主僕" dir= both]
+        //戀愛
+        yjh -> zly [label="一見鍾情",color="#ff99cc"]
+        yzy -> cjm [label="暗戀",color="#ff99cc"]
+        ymr -> fmy [label="喜歡",color="#ff99cc"]
+        ymr -> yl [label="喜歡",color="#ff99cc"]
+        zdc -> fmy [label="情侶",color="#ff99cc"]
+        glz -> hfr  [label="喜歡",color="#ff99cc"]
+        //殺害&毀屍
+        fmy -> ymr [label="殺害",color="#990000"]
+        hry -> cst [label="殺害",color="#990000"]
+        ycs -> fcs [label="殺害",color="#990000"]
+        cqw -> fcs [label="殺害",color="#990000"]
+        xfr -> zyt [label="殺害",color="#990000"]
+        hry -> fcs [label="毀屍",color="#990000"]
+        //傷害
+        yjh -> zdc [label="打傷",color="#ff8000"]
+        zdc -> cjm [label="放火燒毀洋房導致視力受損",color="#ff8000"]
+        dgc -> yjh [label="下藥迷昏",color="#ff8000"]
+        hfr -> yjh [label="下藥迷昏",color="#ff8000"]
+        hfr -> ycs [label="長期下藥迷昏",color="#ff8000"]
+        //劇情聯繫
+        cjm -> hry [label = "給了一錠銀子",color = "#66cc00"]
+        dgc -> cjm [label = "醫治眼睛",color = "#66cc00"]
+        hry -> hfr [label = "假裝買地",color = "#66cc00"]
+        ymr -> zdc [label = "抓到偷竊並送到官府",color = "#66cc00"]
+        zdc -> dgc [label = "給了一支洋火",color = "#66cc00"]
+
+
+
+
+    }
 }
