@@ -1,12 +1,15 @@
 digraph hmjq{
     //劇情題到的組織
+    graph [fontname="KAIU"]
+    node  [fontname="KAIU"]
+    edge  [fontname="KAIU"]
     node [shape=doubleoctagon]
     hlh [label="黑狼會"]
     tjs [label="田吉株式會社"]
     flsh [label="法朗商行"]
     node [shape=record]
     subgraph cluster_天津結社 {
-        graph [label="《天津結社六人》\n(光緒二十一年閏五月結社於天津)"]
+        graph [label="《天津結社六人》\n(光緒二十一年閏五月結社於天津)",fontname="KAIU"]
         //定義人物
         zwl [label="{趙萬雷|男 - 四十四歲 | 丹水山莊主人\n遭馮雙驥毒害身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
         ms [label="{孟深|男 - ???歲 | 法蘭莊主人\n化學家\n遭杜貴成刺殺身亡}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
@@ -19,10 +22,11 @@ digraph hmjq{
         tmg -> zwl [label = "贈送金龍刀",color = "#66cc00"]
       }
     subgraph cluster_傀儡的記憶{
-        graph [label="《傀儡的記憶》\n(1914年8月3日 上海郊外-法蘭莊)"]
+        graph [label="《傀儡的記憶》\n(1914年8月3日 上海郊外-法蘭莊)",fontname="KAIU"]
         //玩家操控角色
         subgraph cluster_傀儡的記憶玩家角色 {
-            graph [label="《傀儡的記憶玩家角色》"]
+            fontname="KAIU"
+            graph [label="《傀儡的記憶玩家角色》",fontname="KAIU"]
             mqh [label="{孟清淮/吳笑/(假)安寧|男 - 二十多歲 | 法蘭莊少主}",color = "#0000ff", style="rounded"];
             yca [label="{易楚安/血衣男人/(假)安寧|男 - ???歲 | 申報記者}",color = "#0000ff", style="rounded"];
             yks [label="{岳客沙/(假)約克|男 - 二十五歲 | 岳氏藥材公司少東}",color = "#0000ff", style="rounded"];
@@ -73,7 +77,7 @@ digraph hmjq{
           graph [label="《孝衣新娘玩家角色》"]
           yzy [label="{姚仲義|男 - 二十多歲 |姚家次子}",color = "#0000ff", style="rounded"];
           hfr [label="{田紅嬌/紅夫人|女 - 二十九歲 |姚長壽三房太太\n翡翠居老闆娘}",color = "#ff0000",style="rounded"];
-          yl  [label="{廖雲凌|女 - 二十多歲 |短髮英氣}",color = "#ff0000",style="rounded"];
+          lyl [label="{廖雲凌/(假)月蝶|女 - 二十歲 | 廖氏商行千金}",color = "#ff0000", style="rounded"];
           hry [label="{胡人玉/范金魁/金鬍子|男 - 三十多歲 |江洋大盗}",color = "#0000ff",style="rounded"];
           cjm [label="{陳均夢|女 - 二十一歲 |姚孟仁妻子\n長髮白衣}",color = "#ff0000",style="rounded"];
           yjh [label="{虞君鴻/尹少鳴|男 - 二十多歲 |}",color = "#0000ff", style="rounded"];
@@ -103,11 +107,11 @@ digraph hmjq{
         //父女
         cqw -> cjm [label="父女" dir= both]
         cst -> caq [label="父女" dir= both]
-        rdy -> rs [label="父女" dir= both]
+        rdy -> rx [label="父女" dir= both]
         fcs -> fmy [label="父女" dir= both]
-        lyq -> yl [label="父女" dir= both]
+        lyq -> lyl [label="父女" dir= both]
         //母子
-        rs -> yjh [label="母子" dir= both]
+        rx -> yjh [label="母子" dir= both]
         xfr -> ymr [label="母子" dir= both]
         zyt -> yzy [label="母子" dir= both]
         //夫妻
@@ -135,7 +139,7 @@ digraph hmjq{
         yjh -> zly [label="一見鍾情",color="#ff99cc"]
         yzy -> cjm [label="暗戀",color="#ff99cc"]
         ymr -> fmy [label="喜歡",color="#ff99cc"]
-        ymr -> yl [label="喜歡",color="#ff99cc"]
+        ymr -> lyl [label="喜歡",color="#ff99cc"]
         zdc -> fmy [label="情侶",color="#ff99cc"]
         glz -> hfr  [label="喜歡",color="#ff99cc"]
         //殺害&毀屍
@@ -162,4 +166,77 @@ digraph hmjq{
 
 
     }
+    subgraph cluster_待月弒殺{
+        graph [label="《待月弒殺》\n(1914年8月11日 無錫站東-岑家)",fontname="KAIU"]
+        //玩家操控角色
+        subgraph cluster_待月弒殺玩家角色 {
+            fontname="KAIU"
+            graph [label="《待月弒殺玩家角色》",fontname="KAIU"]
+            czx [label="{岑執孝/(假)岑仲古|男 - 二十八歲 | 岑仲古侄子}",color = "#0000ff", style="rounded"];
+            lzj [label="{李子俊/宇祖成木/(假)田吉霧朗|男 - 四十二歲 |(前)田吉株式會社員工 }",color = "#0000ff", style="rounded"];
+            lyl [label="{廖雲凌/(假)月蝶|女 - 二十歲 | 廖氏商行千金}",color = "#ff0000", style="rounded"];
+            ad [label="{艾德/(假)卓爾瑞|男 - 三十二歲 | 聖約翰大學教授\n連環殺人魔}",color = "#0000ff", style="rounded"];
+            pjm [label="{平佳妹/蔣佳妹|女 - 二十一歲 |『茱莉』孤兒院員工}",color = "#ff0000",style="rounded"];
+            nx [label="{儂秀/李儂秀|女 - 十九歲 |『茱莉』孤兒院員工}",color = "#ff0000",style="rounded"];
+          }
+        //其他角色
+        subgraph cluster_待月弒殺其他角色 {
+            graph [label="《待月弒殺其他角色》"]
+            cyl [label="{岑揚禮|男 - 三十七歲 | 岑家主人\n被岑執孝割喉殺害}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            czg [label="{岑仲古|男 - 三十七歲 | 岑家主人\n被岑執孝槍殺}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            cbj [label="{岑柏今|男 - ???歲 | 岑仲古哥哥}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            jbj [label="{蔣伯駒|男 - ???歲 | 銀匠\n遭艾德陷害\n被岑仲古逮捕刑求致死}",color = "#0000ff", style="filled,rounded",fillcolor="#a1a1a1"];
+            ps [label="{平氏|女 - ???歲 | 蔣伯駒妻子\n銀粉中毒身亡}",color = "#ff0000", style="filled,rounded",fillcolor="#a1a1a1"];
+            zer [label="{卓爾瑞|男 - 三十二歲 | 聖約翰大學教授\n遭艾德假冒身分}",color = "#0000ff",style="rounded"];
+            //lyq [label="{廖一喬|男 - ???歲 | 廖氏商行老闆}",color = "#0000ff",style="rounded"];
+            twf [label="{唐婉楓|女 - ???歲 | 廖一喬妻子\n被岑仲古騙去日本鬱鬱而終}",color = "#ff0000",style="filled,rounded",fillcolor="#a1a1a1"];
+            lxh [label="{廖雪寒|男 - 十八歲 | 廖氏商行公子}",color = "#0000ff",style="rounded"];
+            jym [label="{姜艷美|女 - ???歲 | 岑仲古妻子\n遭岑執孝勒死}",color = "#ff0000",style="filled,rounded",fillcolor="#a1a1a1"];
+            tjwl [label="{田吉霧朗/陳良雨|男 - 三十六歲 | 『霧』(Mist)夜總會經理}",color = "#0000ff",style="rounded"];
+            yd [label="{月蝶|女 - 三十六歲 | 『霧』(Mist)夜總會歌星}",color = "#0000ff",style="rounded"];
+            bs [label="{白氏|女 - ???歲 | 岑柏今妻子\n生病死亡}",color = "#0000ff",style="filled,rounded",fillcolor="#a1a1a1"];
+          }
+        //父子
+        cbj -> czx  [label="父子" dir= both]
+        czg -> cyl [label="父子" dir= both]
+        lyq -> lxh [label="父子" dir= both]
+        //父女
+        lyq -> lyl [label="父女" dir= both]
+        jbj -> pjm [label="父女" dir= both]
+        //母子
+        twf -> lxh [label="母子" dir= both]
+        bs -> czx [label="母子" dir= both]
+        //母女
+        twf -> lyl [label="母女" dir= both]
+        ps -> pjm [label="母女" dir= both]
+        jym -> nx [label="母女" dir= both]
+        //兄弟
+        cbj -> czg [label="兄弟" dir= both]
+        //兄妹
+        tmg -> twf [label="兄妹" dir= both]
+        //夫妻
+        cbj -> bs [label="夫妻" dir= both]
+        czg -> jym [label="夫妻" dir= both]
+        lyq -> twf [label="夫妻" dir= both]
+        //假扮
+        czx -> czg [label="假扮",color="#6600CC"]
+        lzj -> tjwl [label="假扮",color="#6600CC"]
+        lyl -> yd [label="假扮",color="#6600CC"]
+        ad -> zer [label="假扮",color="#6600CC"]
+        //戀愛
+        jym -> lzj [label="喜歡",color="#ff99cc" ]
+        czg -> jym [label="喜歡",color="#ff99cc" ]
+        //殺害&棄屍
+        czx -> czg [label="殺害",color="#990000"]
+        czx -> cyl [label="殺害",color="#990000"]
+        czx -> jym [label="殺害",color="#990000"]
+        czg -> jbj [label="殺害",color="#990000"]
+        //劇情聯繫
+        ad -> jbj [label = "誣陷",color = "#66cc00"]
+        czg -> twf [label = "騙去日本",color = "#66cc00"]
+        czg -> lxh [label = "騙去日本",color = "#66cc00"]
+        twf -> jym [label = "拯救落水",color = "#66cc00"]
+        jym -> ps [label = "照顧",color = "#66cc00"]
+        yd -> pjm [label = "贈送愛馬仕皮包",color = "#66cc00"]
+      }
 }
